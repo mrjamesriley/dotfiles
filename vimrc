@@ -1,30 +1,40 @@
 set nocompatible
+:colorscheme wombat
 syntax on
-colorscheme wombat
 
-call pathogen#runtime_append_all_bundles()
-
-" enable filetype specific indenting and pluings  
-filetype plugin indent on 
-
-" indent settings
-set shiftwidth=2
-set tabstop=2
+set hidden
+set number
 set softtabstop=2
-set expandtab
 set autoindent
-set incsearch   " find the next match as we type the search
-set hlsearch    " hilight searches by default
+set copyindent
+set expandtab
+set showmode
+set incsearch
+set hlsearch
+set guioptions-=T
+set ignorecase
 
-set nowrap      " dont wrap lines
-set linebreak   " wrap lines at convenient points
-set number      " line numbers
+" load ftplugins and indent files
+filetype plugin on
+filetype indent on
 
-" who wants to reach for ESC all the time?
+" Get out of my face swap files
+set backupdir=$HOME/.swp//
+set directory=$HOME/.swp//
+
+
+" make <c-l> clear the highlight as well as redraw
+nnoremap <C-L> :nohls<CR><C-L>
+inoremap <C-L> <C-O>:nohls<CR>
+
+" shortcut to esc
 imap jj <Esc>
 
 let mapleader = ','
-noremap <leader>n :NERDTreeToggle<CR> 
+noremap <leader>n :NERDTreeToggle<CR>
+
+" lazy shortcut to enter command mode
+nmap ; :
 
 " Load matchit (% to bounce from do to end, etc.)
 runtime! macros/matchit.vim
@@ -36,3 +46,5 @@ augroup myfiletypes
   autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
 augroup END
 
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
