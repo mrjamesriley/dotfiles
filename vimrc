@@ -13,6 +13,7 @@ set incsearch
 set hlsearch
 set guioptions-=T
 set ignorecase
+set guifont=Monospace\ 9 
 
 " load ftplugins and indent files
 filetype plugin on
