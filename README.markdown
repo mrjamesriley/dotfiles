@@ -1,7 +1,8 @@
 # Dotfiles
 
 Only using for Vim at the moment.  
-Add your dotfiles and folders to here, then run ruby.install to create symlinks files from their corresponding home locations.
+Create ~/dotfiles add your dotfiles and folders to here.  
+Then run install.rb to create symlinks files from their corresponding home locations.
 
 
 ## Installion
