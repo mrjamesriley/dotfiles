@@ -15,9 +15,11 @@ set guioptions-=T
 set ignorecase
 set guifont=Monospace\ 9 
 
+
+call pathogen#runtime_append_all_bundles()
+
 " load ftplugins and indent files
 filetype plugin on
-"filetype indent on
 
 " Get out of my face swap files
 set backupdir=$HOME/.swp//
@@ -47,5 +49,3 @@ augroup myfiletypes
   autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
 augroup END
 
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
