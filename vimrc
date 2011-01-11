@@ -17,7 +17,7 @@ set guifont=Monospace\ 9
 
 " load ftplugins and indent files
 filetype plugin on
-filetype indent on
+"filetype indent on
 
 " Get out of my face swap files
 set backupdir=$HOME/.swp//
