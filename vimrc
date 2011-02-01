@@ -5,6 +5,7 @@ syntax on
 set hidden
 set number
 set softtabstop=2
+set shiftwidth=2
 set autoindent
 set copyindent
 set expandtab
@@ -20,6 +21,7 @@ call pathogen#runtime_append_all_bundles()
 
 " load ftplugins and indent files
 filetype plugin on
+filetype indent on
 
 " Get out of my face swap files
 set backupdir=$HOME/.swp//
@@ -29,6 +31,9 @@ set directory=$HOME/.swp//
 " make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
+
+" easier bufferage
+nnoremap <leader>b :BufExplorer
 
 " shortcut to esc
 imap jj <Esc>

@@ -1,1 +1,2 @@
 --type-add=ruby=.haml,.rake
+--type-add=css=.sass
