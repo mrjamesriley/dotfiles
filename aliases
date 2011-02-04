@@ -1,12 +1,17 @@
-# non private aliases - simply add to bashrc
-# with 'source .aliases'
+# non private aliases - simply add to bashrc or profile with 'source .aliases'
 
 # Rails 2
 alias ss='ruby script/server --debugger'
 alias sc='ruby script/console'
 
 # Git
-alias gs='git status'
+alias ga='git add'
+alias gb='git branch'
 alias gc='git commit'
+alias gd='git diff'
 alias gl='git log'
+alias gp='git pull'
+alias gpush='git push'
+alias gs='git status'
+
 
