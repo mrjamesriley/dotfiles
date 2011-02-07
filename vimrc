@@ -18,6 +18,7 @@ set guifont=Monospace\ 9
 
 
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " load ftplugins and indent files
 filetype plugin on
