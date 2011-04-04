@@ -15,6 +15,7 @@ set hlsearch
 set guioptions-=T
 set ignorecase
 set guifont=Monospace\ 9 
+let NERDTreeShowHidden=1
 
 
 call pathogen#runtime_append_all_bundles()
@@ -56,4 +57,5 @@ augroup myfiletypes
 augroup END
 
 set laststatus=2
-set statusline=%f\ %{fugitive#statusline()} 
+set statusline=%f
+"\ %{fugitive#statusline()} 
