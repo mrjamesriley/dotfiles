@@ -15,6 +15,8 @@ set hlsearch
 set guioptions-=T
 set ignorecase
 set guifont=Monospace\ 9 
+set splitbelow
+set splitright
 let NERDTreeShowHidden=1
 
 
