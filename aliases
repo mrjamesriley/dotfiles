@@ -4,6 +4,11 @@
 alias ss='ruby script/server --debugger'
 alias sc='ruby script/console'
 
+# Rails 3
+alias rc='rails c'
+alias rs='rails s'
+alias rg='rails g'
+
 # Git
 alias ga='git add'
 alias gb='git branch'

@@ -18,6 +18,7 @@ set guifont=Monospace\ 9
 set splitbelow
 set splitright
 let NERDTreeShowHidden=1
+au BufNewFile,BufRead *.watchr set filetype=ruby
 
 
 call pathogen#runtime_append_all_bundles()
