@@ -17,6 +17,6 @@ alias gd='git diff'
 alias gl='git log'
 alias gp='git pull'
 alias gpush='git push'
-alias gs='git status'
+alias gs='git status -sb'
 
 
