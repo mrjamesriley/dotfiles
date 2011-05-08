@@ -19,4 +19,6 @@ alias gp='git pull'
 alias gpush='git push'
 alias gs='git status -sb'
 
+# Other
+alias deploy='cap deploy'
 
