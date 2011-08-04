@@ -14,7 +14,7 @@ set incsearch
 set hlsearch
 set guioptions-=T
 set ignorecase
-set guifont=Monospace\ 9 
+set guifont=Monaco:h12
 set splitbelow
 set splitright
 let NERDTreeShowHidden=1
@@ -36,6 +36,9 @@ set directory=$HOME/.swp//
 " make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
+
+" insert a new line after the current line
+nnoremap <Enter> o<Esc>k
 
 " easier bufferage
 nnoremap <leader>b :BufExplorer

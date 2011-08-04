@@ -8,6 +8,8 @@ alias sc='ruby script/console'
 alias rc='rails c'
 alias rs='rails s'
 alias rg='rails g'
+alias migrate='rake db:migrate; tmigrate'
+alias tmigrate='RAILS_ENV=test rake db:migrate'
 
 # Git
 alias ga='git add'
@@ -21,4 +23,6 @@ alias gs='git status -sb'
 
 # Other
 alias deploy='cap deploy'
-
+alias n='node'
+alias redis-server='/usr/local/Cellar/redis/2.2.6/bin/redis-server'
+alias redis-client='/usr/local/Cellar/redis/2.2.6/bin/redis-cli'
