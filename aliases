@@ -8,8 +8,12 @@ alias sc='ruby script/console'
 alias rc='rails c'
 alias rs='rails s'
 alias rg='rails g'
+
 alias migrate='rake db:migrate; tmigrate'
+alias rollback='rake db:rollback; trollback'
+
 alias tmigrate='RAILS_ENV=test rake db:migrate'
+alias trollback='RAILS_ENV=test rake db:rollback'
 
 # Git
 alias ga='git add'
