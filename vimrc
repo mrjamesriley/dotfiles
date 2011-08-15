@@ -14,11 +14,12 @@ set incsearch
 set hlsearch
 set guioptions-=T
 set ignorecase
-set guifont=Monaco:h12
+set guifont=Monaco:h10
 set splitbelow
 set splitright
 let NERDTreeShowHidden=1
 au BufNewFile,BufRead *.watchr set filetype=ruby
+au BufNewFile,BufRead *.coffee set filetype=coffee
 
 
 call pathogen#runtime_append_all_bundles()
