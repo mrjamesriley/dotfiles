@@ -48,7 +48,9 @@ imap jj <Esc>
 
 noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader><tab> :tabnext<CR>
-noremap <leader>w <C-w>w
+
+" cycle through windows with command-w
+noremap <D-]> <C-w>w
 
 " lazy shortcut to enter command mode
 nmap ; :
