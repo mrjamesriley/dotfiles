@@ -18,8 +18,6 @@ set guifont=Monaco:h12
 set splitbelow
 set splitright
 let NERDTreeShowHidden=1
-au BufNewFile,BufRead *.watchr set filetype=ruby
-
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -65,3 +63,7 @@ augroup END
 set laststatus=2
 set statusline=%f
 "\ %{fugitive#statusline()} 
+
+" coffeescript syntax highlighting
+au BufNewFile,BufRead *.coffee set filetype=coffee
+au BufNewFile,BufRead *.watchr set filetype=ruby
