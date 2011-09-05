@@ -14,13 +14,16 @@ set incsearch
 set hlsearch
 set guioptions-=T
 set ignorecase
-set guifont=Monaco:h12
+set guifont=Monaco:h10
 set splitbelow
 set splitright
 let NERDTreeShowHidden=1
+au BufNewFile,BufRead *.watchr set filetype=ruby
+au BufNewFile,BufRead *.coffee set filetype=coffee
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+let mapleader = ','
 
 " load ftplugins and indent files
 filetype plugin on
@@ -29,7 +32,6 @@ filetype indent on
 " Get out of my face swap files
 set backupdir=$HOME/.swp//
 set directory=$HOME/.swp//
-
 
 " make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
@@ -44,8 +46,11 @@ nnoremap <leader>b :BufExplorer
 " shortcut to esc
 imap jj <Esc>
 
-let mapleader = ','
 noremap <leader>n :NERDTreeToggle<CR>
+noremap <leader><tab> :tabnext<CR>
+
+" cycle through windows with command-w
+noremap <D-]> <C-w>w
 
 " lazy shortcut to enter command mode
 nmap ; :
@@ -62,8 +67,3 @@ augroup END
 
 set laststatus=2
 set statusline=%f
-"\ %{fugitive#statusline()} 
-
-" coffeescript syntax highlighting
-au BufNewFile,BufRead *.coffee set filetype=coffee
-au BufNewFile,BufRead *.watchr set filetype=ruby
