@@ -14,7 +14,7 @@ set incsearch
 set hlsearch
 set guioptions-=T
 set ignorecase
-set guifont=Monaco:h10
+set guifont=Monaco:h12
 set splitbelow
 set splitright
 let NERDTreeShowHidden=1
@@ -51,6 +51,10 @@ noremap <leader><tab> :tabnext<CR>
 
 " cycle through windows with command-w
 noremap <D-]> <C-w>w
+
+" cycle through tabs with cmd-9 and cmd-0
+noremap <D-0> :tabnext<CR>
+noremap <D-9> :tabprev<CR>
 
 " lazy shortcut to enter command mode
 nmap ; :
