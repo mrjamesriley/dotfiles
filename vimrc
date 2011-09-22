@@ -49,6 +49,9 @@ imap jj <Esc>
 noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader><tab> :tabnext<CR>
 
+noremap <leader>csr :CoffeeRun<CR>
+noremap <leader>csc :CoffeeCompile<CR>
+
 " cycle through windows with command-w
 noremap <D-]> <C-w>w
 
