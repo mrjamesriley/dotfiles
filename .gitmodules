@@ -28,3 +28,6 @@
 [submodule "vim/bundle/vim-ruby-matchit"]
 	path = vim/bundle/vim-ruby-matchit
 	url = https://github.com/thisivan/vim-ruby-matchit.git
+[submodule "vim/bundle/mustache"]
+	path = vim/bundle/mustache
+	url = https://github.com/juvenn/mustache.vim.git

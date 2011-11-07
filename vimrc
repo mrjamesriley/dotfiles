@@ -14,7 +14,7 @@ set incsearch
 set hlsearch
 set guioptions-=T
 set ignorecase
-set guifont=Monaco:h12
+set guifont=Monaco:h10
 set splitbelow
 set splitright
 let NERDTreeShowHidden=1
