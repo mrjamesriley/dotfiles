@@ -31,3 +31,4 @@ alias deploy='cap deploy'
 alias n='node'
 alias redis-server='/usr/local/Cellar/redis/2.2.6/bin/redis-server'
 alias redis-client='/usr/local/Cellar/redis/2.2.6/bin/redis-cli'
+alias cakephp="/usr/local/cakephp/lib/Cake/Console/cake"

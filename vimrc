@@ -12,13 +12,20 @@ set expandtab
 set showmode
 set incsearch
 set hlsearch
-set guioptions-=T
+set guioptions-=T " hide toolbar
 set ignorecase
+" set guifont=Inconsolata:h14
 set guifont=Monaco:h10
 set splitbelow
 set splitright
+
+" word wrap without breaking at middle of word
+set formatoptions=l
+set lbr
+
 let NERDTreeShowHidden=1
 au BufNewFile,BufRead *.watchr set filetype=ruby
+au BufNewFile,BufRead *.ru     set filetype=ruby
 au BufNewFile,BufRead *.coffee set filetype=coffee
 
 call pathogen#runtime_append_all_bundles()
