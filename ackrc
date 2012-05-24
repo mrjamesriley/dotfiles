@@ -2,3 +2,5 @@
 --type-add=css=.sass
 --type-add=css=.scss
 --type-add=js=.coffee
+
+--smart-case
