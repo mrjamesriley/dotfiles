@@ -28,3 +28,6 @@
 [submodule "vim/bundle/mustache"]
 	path = vim/bundle/mustache
 	url = https://github.com/juvenn/mustache.vim.git
+[submodule "vim/bundle/indent-guides"]
+	path = vim/bundle/indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
