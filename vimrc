@@ -2,6 +2,9 @@ set nocompatible
 :colorscheme wombat
 syntax on
 
+set exrc " enable per-directory vimrc files
+set secure " disable unsafe commands in local .vimrc files
+
 set hidden
 set number
 set softtabstop=2
@@ -13,7 +16,7 @@ set showmode
 set incsearch
 set hlsearch
 set guioptions-=T " hide toolbar
-set ignorecase
+set smartcase
 " set guifont=Inconsolata:h14
 set guifont=Monaco:h10
 set splitbelow
@@ -43,6 +46,7 @@ set directory=$HOME/.swp//
 " make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
+nnoremap <leader>s :Ack '
 
 " insert a new line after the current line
 nnoremap <Enter> o<Esc>k
