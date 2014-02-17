@@ -1,14 +1,45 @@
 # non private aliases - simply add to bashrc or profile with 'source .aliases'
 
-# Rails 2
-alias ss='ruby script/server --debugger'
-alias sc='ruby script/console'
+# set the title of iTerm by reading a file in the current folder
+# using to easy title the tabs for rails consoles and servers
+function setItermTitle {
+  if [ -f .bashname ];
+  then
+    echo -e "\033];`cat .bashname` $1 \007"
+  fi
+}
+
+function loadRailsConsole {
+  R2_CONSOLE=`pwd`"/script/console"
+
+  if [ -f $R2_CONSOLE ];
+  then
+    script/console
+  else
+    rails console
+  fi
+}
+
+function loadRailsServer {
+  R2_SERVER=`pwd`"/script/server"
+
+  if [ -f $R2_SERVER ];
+  then
+    script/server -p $1
+  else
+    rails server -p $1
+  fi
+}
+
+alias s='setItermTitle Server; loadRailsServer'
+alias c='setItermTitle Console; loadRailsConsole'
 
 # Rails 3
-alias rc='rails c'
-alias rs='rails s'
+alias rc='setItermTitle Console; rails c'
+alias rs='setItermTitle Server; rails s'
 alias rg='rails g'
 alias seed='rake db:seed'
+alias be='bundle exec'
 
 alias migrate='rake db:migrate; tmigrate'
 alias rollback='rake db:rollback; trollback'
@@ -20,6 +51,7 @@ alias trollback='RAILS_ENV=test rake db:rollback'
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
+alias gco='git checkout'
 alias gd='git diff'
 alias gl='git log'
 alias gp='git pull'
@@ -27,6 +59,7 @@ alias gpush='git push'
 alias gs='git status -sb'
 
 # Other
+alias m='mvim .'
 alias deploy='cap deploy'
 alias n='node'
 alias redis-server='/usr/local/Cellar/redis/2.2.6/bin/redis-server'
