@@ -1,3 +1,6 @@
+" Vim plugins installed with Pathogen and Git Submodules, as described here:
+" http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+
 set nocompatible
 :colorscheme wombat
 syntax on
