@@ -13,7 +13,6 @@ set number
 set softtabstop=2
 set shiftwidth=2
 set autoindent
-" set cursorline
 set copyindent
 set expandtab
 set showmode
@@ -77,12 +76,13 @@ noremap <leader><tab> :tabnext<CR>
 noremap <leader>csr :CoffeeRun<CR>
 noremap <leader>csc :CoffeeCompile<CR>
 
-" to winning old hash rocket to new hash
+" from old Ruby hash rocket to new hash
 nmap <Leader>hr :%s/:\([^=,'"]*\) =>/\1:/g<cr>
 vmap <Leader>hr :s/\:\([a-zA-Z_]*\)\s=>/\1\:/g<cr>
 
 " cycle through windows with command-w
 noremap <D-]> <C-w>w
+noremap <D-[> <C-w>W
 
 " cycle through tabs with cmd-9 and cmd-0
 noremap <D-0> :tabnext<CR>

@@ -40,3 +40,6 @@
 [submodule "vim/bundle/vim-rails"]
 	path = vim/bundle/vim-rails
 	url = https://github.com/tpope/vim-rails
+[submodule "vim/bundle/vim-livereload"]
+	path = vim/bundle/vim-livereload
+	url = git@github.com:flomotlik/vim-livereload.git
