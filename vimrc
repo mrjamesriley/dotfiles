@@ -18,8 +18,10 @@ set incsearch
 set hlsearch
 set guioptions-=T " hide toolbar
 set smartcase
-" set guifont=Inconsolata:h14
+
+set noantialias
 set guifont=Monaco:h10
+
 set splitbelow
 set splitright
 
@@ -34,6 +36,7 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 
 let NERDTreeShowHidden=1
+
 au BufNewFile,BufRead *.watchr set filetype=ruby
 au BufNewFile,BufRead *.ru     set filetype=ruby
 au BufNewFile,BufRead *.coffee set filetype=coffee
@@ -124,3 +127,11 @@ augroup myvimrc
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
+
+" want ctrlp to be able to replace the nerdTree window
+" https://github.com/kien/ctrlp.vim/issues/78
+let g:ctrlp_reuse_window = 'NERD_tree_1'
+
+" Hamlbars uses HAML syntax
+autocmd BufNewFile,BufReadPost *.hamlbars set filetype=haml
+autocmd BufNewFile,BufReadPost *.hbs set filetype=haml
