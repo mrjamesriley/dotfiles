@@ -55,6 +55,10 @@ filetype indent on
 set backupdir=$HOME/.swp//
 set directory=$HOME/.swp//
 
+" Turn off Backup/Swap files completely, we have VCS
+set nobackup
+set noswapfile
+
 " make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
@@ -138,3 +142,4 @@ let g:ctrlp_reuse_window = 'NERD_tree_1'
 " Hamlbars uses HAML syntax
 autocmd BufNewFile,BufReadPost *.hamlbars set filetype=haml
 autocmd BufNewFile,BufReadPost *.hbs set filetype=haml
+autocmd BufNewFile,BufReadPost *.json set filetype=javascript
