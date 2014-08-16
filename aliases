@@ -69,3 +69,6 @@ alias n='node'
 alias redis-server='/usr/local/Cellar/redis/2.2.6/bin/redis-server'
 alias redis-client='/usr/local/Cellar/redis/2.2.6/bin/redis-cli'
 alias cakephp="/usr/local/cakephp/lib/Cake/Console/cake"
+
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
