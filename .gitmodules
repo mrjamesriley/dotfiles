@@ -43,3 +43,6 @@
 [submodule "vim/bundle/vim-livereload"]
 	path = vim/bundle/vim-livereload
 	url = git@github.com:flomotlik/vim-livereload.git
+[submodule "vim/bundle/vim-skeleton"]
+	path = vim/bundle/vim-skeleton
+	url = git@github.com:noahfrederick/vim-skeleton.git

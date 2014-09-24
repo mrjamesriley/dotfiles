@@ -6,3 +6,5 @@
 --type-add=html=.hamlbars
 
 --smart-case
+
+--ignore-dir=log
