@@ -5,4 +5,8 @@
 --type-add=html=.liquid
 --type-add=html=.hamlbars
 
+--ignore-dir=tmp
+--ignore-dir=log
+--ignore-dir=vendor
+
 --smart-case

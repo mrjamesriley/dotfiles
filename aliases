@@ -62,10 +62,13 @@ alias gl='git log'
 alias gp='git pull'
 alias gpush='git push'
 alias gs='git status -sb'
+alias gm='git merge'
+alias g='git'
 
 # Other
 alias m='mvim .'
 alias n='node'
+alias p='ps aux | grep'
 alias redis-server='/usr/local/Cellar/redis/2.2.6/bin/redis-server'
 alias redis-client='/usr/local/Cellar/redis/2.2.6/bin/redis-cli'
 alias cakephp="/usr/local/cakephp/lib/Cake/Console/cake"
