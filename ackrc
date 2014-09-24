@@ -10,3 +10,5 @@
 --ignore-dir=vendor
 
 --smart-case
+
+--ignore-dir=log
