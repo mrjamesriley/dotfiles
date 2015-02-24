@@ -62,7 +62,7 @@ set noswapfile
 " make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
-nnoremap <leader>s :Ack '
+nnoremap <leader>s :Ack -Q '
 
 " insert a new line after the current line
 nnoremap <Enter> o<Esc>k
