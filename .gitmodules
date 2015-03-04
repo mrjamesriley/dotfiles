@@ -55,3 +55,6 @@
 [submodule "vim/bundle/vim-rspec"]
 	path = vim/bundle/vim-rspec
 	url = https://github.com/thoughtbot/vim-rspec
+[submodule "vim/bundle/vim-liquid"]
+	path = vim/bundle/vim-liquid
+	url = git@github.com:tpope/vim-liquid.git
