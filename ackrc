@@ -1,9 +1,10 @@
---type-add=ruby=.haml,.rake
+--type-add=ruby=.rake
 --type-add=css=.sass
 --type-add=css=.scss
 --type-add=js=.coffee
 --type-add=html=.liquid
 --type-add=html=.hamlbars
+--type-add=html=.haml
 
 --ignore-dir=tmp
 --ignore-dir=log
