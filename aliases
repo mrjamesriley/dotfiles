@@ -65,6 +65,7 @@ alias gpush='git push'
 alias gs='git status -sb'
 alias gm='git merge'
 alias g='git'
+alias gr='git rebase -i'
 
 # Other
 alias m='mvim .'
