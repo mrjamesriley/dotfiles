@@ -38,6 +38,7 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 
 let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.DS_Store']
 
 au BufNewFile,BufRead *.watchr set filetype=ruby
 au BufNewFile,BufRead *.ru     set filetype=ruby
