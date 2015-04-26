@@ -1,43 +1,11 @@
 # non private aliases - simply add to bashrc or profile with 'source .aliases'
 
-# set the title of iTerm by reading a file in the current folder
-# using to easy title the tabs for rails consoles and servers
-function setItermTitle {
-  if [ -f .bashname ];
-  then
-    echo -e "\033];`cat .bashname` $1 \007"
-  fi
-}
-
-function loadRailsConsole {
-  R2_CONSOLE=`pwd`"/script/console"
-
-  if [ -f $R2_CONSOLE ];
-  then
-    script/console
-  else
-    rails console
-  fi
-}
-
-function loadRailsServer {
-  R2_SERVER=`pwd`"/script/server"
-
-  if [ -f $R2_SERVER ];
-  then
-    script/server -p $1
-  else
-    rails server -p $1
-  fi
-}
-
 function deploy {
   bundle exec cap $1 deploy
 }
 
-alias s='setItermTitle Server; loadRailsServer'
-alias c='setItermTitle Console; loadRailsConsole'
-alias z='zeus'
+# common abbreviations
+alias d='cd ~/dotfiles'
 alias h='cd ~/'
 
 # Rails 3
