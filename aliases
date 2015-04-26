@@ -38,6 +38,7 @@ function deploy {
 alias s='setItermTitle Server; loadRailsServer'
 alias c='setItermTitle Console; loadRailsConsole'
 alias z='zeus'
+alias h='cd ~/'
 
 # Rails 3
 alias rc='setItermTitle Console; rails c'
