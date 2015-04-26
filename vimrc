@@ -65,6 +65,10 @@ nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 nnoremap <leader>s :Ack -Q '
 
+" resize all windows to be equal width and height
+"nnoremap <leader>w <C-W>
+nnoremap <leader>w <C-w>=
+
 " insert a new line after the current line
 nnoremap <Enter> o<Esc>k
 
@@ -73,6 +77,10 @@ nnoremap <leader>b :BufExplorer
 
 " shortcut to esc
 imap jj <Esc>
+
+" quick edit vimrc
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " execute ruby from within vim
 imap <leader>rr <Esc>:!ruby %<cr>
@@ -114,7 +122,7 @@ augroup myfiletypes
 augroup END
 
 set laststatus=2
-set statusline=%f
+set statusline=%f\ -\ %y
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
@@ -122,13 +130,15 @@ function! <SID>StripTrailingWhitespaces()
     return
   endif
 
-  " Preparation: save last search, and cursor position.
+  " preparation: save last search, and cursor position.
   let _s=@/
   let l = line(".")
   let c = col(".")
-  " Do the business:
+
+  " so the business:
   %s/\s\+$//e
-  " Clean up: restore previous search history, and cursor position
+
+  " clean up by restoring previous search history, and cursor position:
   let @/=_s
   call cursor(l, c)
 endfunction
@@ -154,3 +164,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
+
+" common typos / abbreviations automatically corrected
+:iabbrev tempalte template
+:iabbrev fn function
