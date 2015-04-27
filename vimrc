@@ -66,7 +66,6 @@ inoremap <C-L> <C-O>:nohls<CR>
 nnoremap <leader>s :Ack -Q '
 
 " resize all windows to be equal width and height
-"nnoremap <leader>w <C-W>
 nnoremap <leader>w <C-w>=
 
 " insert a new line after the current line
@@ -78,9 +77,13 @@ nnoremap <leader>b :BufExplorer
 " shortcut to esc
 imap jj <Esc>
 
+" easier window splitting
+nnoremap <D-d> :split<cr>
+nnoremap <D-r> :vsplit<cr>
+
 " quick edit vimrc
 nnoremap <leader>ev :split $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>sv :so $MYVIMRC<cr>:echo "VIMRC reloaded..."<cr>
 
 " execute ruby from within vim
 imap <leader>rr <Esc>:!ruby %<cr>
@@ -93,12 +96,15 @@ noremap <leader>csr :CoffeeRun<CR>
 noremap <leader>csc :CoffeeCompile<CR>
 
 " from old Ruby hash rocket to new hash
-nmap <Leader>hr :%s/:\([^=,'"]*\) =>/\1:/g<cr>
-vmap <Leader>hr :s/\:\([a-zA-Z_]*\)\s=>/\1\:/g<cr>
+nmap <leader>hr :%s/:\([^=,'"]*\) =>/\1:/g<cr>
+vmap <leader>hr :s/\:\([a-zA-Z_]*\)\s=>/\1\:/g<cr>
 
 " cycle through windows with command-w
 noremap <D-]> <C-w>w
 noremap <D-[> <C-w>W
+
+" close all windows except the current
+noremap <leader>o :only<cr>
 
 " cycle through tabs with cmd-9 and cmd-0
 noremap <D-0> :tabnext<CR>
@@ -108,8 +114,8 @@ noremap <D-9> :tabprev<CR>
 noremap <leader>ff :s/" do/", focus: true do<CR>
 
 " convert old-school hash rockets to new school hash syntax
-nmap <Leader>h :s/\:\([a-zA-Z_]*\)\s=>/\1\:/g<cr>
-vmap <Leader>h :'<,'>s/\:\([a-zA-Z_]*\)\s=>/\1\:/g<cr>
+nmap <leader>h :s/\:\([a-zA-Z_]*\)\s=>/\1\:/g<cr>
+vmap <leader>h :'<,'>s/\:\([a-zA-Z_]*\)\s=>/\1\:/g<cr>
 
 " Load matchit (% to bounce from do to end, etc.)
 runtime! macros/matchit.vim
