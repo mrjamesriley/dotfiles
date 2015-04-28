@@ -83,7 +83,7 @@ nnoremap <D-r> :vsplit<cr>
 
 " quick edit vimrc
 nnoremap <leader>ev :split $MYVIMRC<cr>
-nnoremap <leader>sv :so $MYVIMRC<cr>:echo "VIMRC reloaded..."<cr>
+nnoremap <leader>rv :so $MYVIMRC<cr>:echo "VIMRC reloaded..."<cr>
 
 " execute ruby from within vim
 imap <leader>rr <Esc>:!ruby %<cr>

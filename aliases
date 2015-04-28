@@ -9,8 +9,8 @@ alias d='cd ~/dotfiles'
 alias h='cd ~/'
 
 # Rails 3
-alias rc='setItermTitle Console; rails c'
-alias rs='setItermTitle Server; rails s'
+alias rc='rails c'
+alias rs='rails s'
 alias rg='rails g'
 alias seed='rake db:seed'
 alias be='bundle exec'
