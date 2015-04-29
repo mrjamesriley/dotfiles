@@ -85,6 +85,9 @@ nnoremap <D-r> :vsplit<cr>
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>rv :so $MYVIMRC<cr>:echo "VIMRC reloaded..."<cr>
 
+" quick access to Vim help pages
+nnoremap <leader>fl :help function-list<cr>
+
 " execute ruby from within vim
 imap <leader>rr <Esc>:!ruby %<cr>
 nmap <leader>rr :!ruby %<cr>
