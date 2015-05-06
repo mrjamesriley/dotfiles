@@ -3,7 +3,6 @@
 
 set nocompatible
 :colorscheme wombat
-syntax on
 
 set exrc " enable per-directory vimrc files
 set secure " disable unsafe commands in local .vimrc files
@@ -44,13 +43,11 @@ au BufNewFile,BufRead *.watchr set filetype=ruby
 au BufNewFile,BufRead *.ru     set filetype=ruby
 au BufNewFile,BufRead *.coffee set filetype=coffee
 
-call pathogen#incubate()
-call pathogen#helptags()
-let mapleader = ','
+call pathogen#infect()
+syntax on
+filetype plugin indent on
 
-" load ftplugins and indent files
-filetype plugin on
-filetype indent on
+let mapleader = ','
 
 " Get out of my face swap files
 set backupdir=$HOME/.swp//
@@ -177,3 +174,6 @@ let g:ctrlp_custom_ignore = {
 " common typos / abbreviations automatically corrected
 :iabbrev tempalte template
 :iabbrev fn function
+
+highlight ColorColumn term=reverse ctermbg=233 guibg=#1E2733
+set colorcolumn=120
