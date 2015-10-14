@@ -35,6 +35,8 @@ alias gs='git status -sb'
 alias gm='git merge'
 alias g='git'
 alias gr='git rebase -i'
+alias gcm='git checkout master'
+alias gcd='git checkout dev'
 
 # Other
 alias m='mvim .'
@@ -46,6 +48,4 @@ alias cakephp="/usr/local/cakephp/lib/Cake/Console/cake"
 
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-
-alias ap='git clone git@github.com:mrjamesriley/angular-playground-light.git'
+alias ap='git clone "git@github.com:mrjamesriley/angular-playground-light.git"; cd angular-playground-light'

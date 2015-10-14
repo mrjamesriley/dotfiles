@@ -37,6 +37,7 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 
 let NERDTreeShowHidden=1
+let NERDTreeShowBookmarks=1
 let NERDTreeIgnore = ['\.DS_Store']
 
 au BufNewFile,BufRead *.watchr set filetype=ruby
@@ -170,7 +171,7 @@ autocmd BufNewFile,BufReadPost *.json set filetype=javascript
 
 " Ignore some folders and files for CtrlP indexing
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+  \ 'dir':  '\.git$\|\.yardoc\|public$\|node_modules$\|vendor$\|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
 
