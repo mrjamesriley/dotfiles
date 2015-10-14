@@ -99,6 +99,9 @@ noremap <leader>csc :CoffeeCompile<CR>
 nmap <leader>hr :%s/:\([^=,'"]*\) =>/\1:/g<cr>
 vmap <leader>hr :s/\:\([a-zA-Z_]*\)\s=>/\1\:/g<cr>
 
+" trigger babeljs compilation of current file
+nnoremap <leader>b :!babel %<cr>
+
 " cycle through windows with command-w
 noremap <D-]> <C-w>w
 noremap <D-[> <C-w>W
@@ -177,3 +180,4 @@ let g:ctrlp_custom_ignore = {
 
 highlight ColorColumn term=reverse ctermbg=233 guibg=#1E2733
 set colorcolumn=120
+
