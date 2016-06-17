@@ -4,6 +4,10 @@ function deploy {
   bundle exec cap $1 deploy
 }
 
+function delete-branch {
+  git push origin :$1; git branch -D $1
+}
+
 # common abbreviations
 alias d='cd ~/dotfiles'
 alias h='cd ~/'
@@ -21,6 +25,9 @@ alias rollback='rake db:rollback; trollback'
 alias tmigrate='RAILS_ENV=test rake db:migrate'
 alias trollback='RAILS_ENV=test rake db:rollback'
 
+alias csd='cap staging deploy'
+alias cpd='cap production deploy'
+
 # Git
 alias ga='git add'
 alias gb='git branch'
@@ -37,6 +44,7 @@ alias g='git'
 alias gr='git rebase -i'
 alias gcm='git checkout master'
 alias gcd='git checkout dev'
+alias gdelete='git branch -D'
 
 # Other
 alias m='mvim .'
@@ -45,7 +53,17 @@ alias p='ps aux | grep'
 alias redis-server='/usr/local/Cellar/redis/2.2.6/bin/redis-server'
 alias redis-client='/usr/local/Cellar/redis/2.2.6/bin/redis-cli'
 alias cakephp="/usr/local/cakephp/lib/Cake/Console/cake"
+alias forestart="foreman start -f Procfile.dev"
+alias wd="npm run webpack-dev"
+alias ws="webdriver-manager start"
+alias gpro="grunt protractor"
+alias restart="touch tmp/restart.txt"
+alias powrestart="touch ~/.pow/restart.txt"
+alias log='tail -f log/development.log'
 
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
 alias ap='git clone "git@github.com:mrjamesriley/angular-playground-light.git"; cd angular-playground-light'
+alias jp='git clone "git@github.com:mrjamesriley/jquery-playground-light.git"; cd jquery-playground-light'
+
