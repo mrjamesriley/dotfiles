@@ -67,3 +67,6 @@
 [submodule "vim/bundle/vim-go"]
 	path = vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "vim/bundle/rename.vim"]
+	path = vim/bundle/rename.vim
+	url = https://github.com/danro/rename.vim.git

@@ -18,6 +18,7 @@ set showmode
 set incsearch
 set hlsearch
 set guioptions-=T " hide toolbar
+set ignorecase
 set smartcase
 
 set noantialias
@@ -100,6 +101,9 @@ noremap <leader>csc :CoffeeCompile<CR>
 nmap <leader>hr :%s/:\([^=,'"]*\) =>/\1:/g<cr>
 vmap <leader>hr :s/\:\([a-zA-Z_]*\)\s=>/\1\:/g<cr>
 
+" trigger babeljs compilation of current file
+nnoremap <leader>b :!babel %<cr>
+
 " cycle through windows with command-w
 noremap <D-]> <C-w>w
 noremap <D-[> <C-w>W
@@ -168,8 +172,8 @@ autocmd BufNewFile,BufReadPost *.json set filetype=javascript
 
 " Ignore some folders and files for CtrlP indexing
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|public$\|node_modules$\|vendor$\|log\|tmp$',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ 'dir':  '\.git$\|\.yardoc\|public$\|node_modules$\|vendor$\|log\|tmp',
+  \ 'file': '\v\.(exe|so|dll|dat|png|jpg|.DS_Store)$',
   \ }
 
 " common typos / abbreviations automatically corrected
@@ -178,3 +182,28 @@ let g:ctrlp_custom_ignore = {
 
 highlight ColorColumn term=reverse ctermbg=233 guibg=#1E2733
 set colorcolumn=120
+
+
+" additions for using javascript linting with the syntastic plugin
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_sass_checkers       = [ 'sass_lint' ]
+
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn

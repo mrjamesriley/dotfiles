@@ -1,4 +1,5 @@
 --type-add=ruby=.rake
+
 --type-add=css=.sass
 --type-add=css=.scss
 --type-add=js=.coffee
@@ -9,8 +10,9 @@
 --ignore-dir=tmp
 --ignore-dir=log
 --ignore-dir=vendor
+--ignore-dir=build
 --ignore-dir=node_modules
+--ignore-dir=coverage
+--ignore-dir=backstop_data/html_report
 
 --smart-case
-
---ignore-dir=log
