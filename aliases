@@ -45,10 +45,13 @@ alias gr='git rebase -i'
 alias gcm='git checkout master'
 alias gcd='git checkout dev'
 alias gdelete='git branch -D'
+alias gtm='gcm; gm dev; gpush'
+
+alias hb='hub browse'
+alias hc='hub compare'
 
 # Other
 alias m='mvim .'
-alias n='node'
 alias p='ps aux | grep'
 alias redis-server='/usr/local/Cellar/redis/2.2.6/bin/redis-server'
 alias redis-client='/usr/local/Cellar/redis/2.2.6/bin/redis-cli'
@@ -61,9 +64,18 @@ alias restart="touch tmp/restart.txt"
 alias powrestart="touch ~/.pow/restart.txt"
 alias log='tail -f log/development.log'
 
+alias nt='npm t'
+alias nto='npm run test:only'
+alias ntov='npm run test:only -- --verbose'
+
+alias bst='backstop test --configPath=backstop.js'
+
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 alias ap='git clone "git@github.com:mrjamesriley/angular-playground-light.git"; cd angular-playground-light'
 alias jp='git clone "git@github.com:mrjamesriley/jquery-playground-light.git"; cd jquery-playground-light'
 
+function cvnc {
+  $1 -L 5902:localhost:5901
+}

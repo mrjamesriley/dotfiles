@@ -12,5 +12,7 @@
 --ignore-dir=vendor
 --ignore-dir=build
 --ignore-dir=node_modules
+--ignore-dir=coverage
+--ignore-dir=backstop_data/html_report
 
 --smart-case
